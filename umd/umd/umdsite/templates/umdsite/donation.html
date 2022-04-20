@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate for good sake!!!</title>
+    <link rel="stylesheet" href="{% static 'umdsite/style.css'%}"/>
+    <link rel="stylesheet" href="{% static 'umdsite/style2.css'%}"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="{% static 'umdsite/images/logo.png'%}" alt="logo" class="img">
+            <ul class="navHeadings">
+                <li><a href="{% url 'sitehome' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+            <a href="{% url 'login' %}"><button type="button" class="loginbtn">Logout</button></a>
+        </nav>
+    </header>
+    <main>
+        <div class="container"><br><br>
+            <h1 class="bottomLR">Enter Donation Details</h1><br><br>
+            <form method="post">{% csrf_token %}
+                Enter username: <input type="text" name="username"><br><br>
+                Enter Medicine name: <input type="text" name="MedName"><br><br>
+                Enter Medicine Details:  <textarea name="medDetails" cols="20" rows="5"></textarea><br><br>
+                Enter Address:  <textarea name="address" cols="20" rows="5"></textarea><br><br>
+                <input type="submit" value="Submit" class="formbtn">
+                <input type="reset" value="Clear" class="formbtn">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p class="footerSection">Copyright &copy; 2022 | Unused Medicine Donation</p>
+    </footer>
+</body>
+</html>

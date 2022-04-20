@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="{% static 'umdsite/style.css'%}"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="{% static 'umdsite/images/logo.png'%}" alt="logo" class="img">
+            <ul class="navHeadings">
+                <li><a href="{% url 'sitehome' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+            <a href="{% url 'login' %}"><button type="button" class="loginbtn">Login/Sign Up</button></a>
+        </nav>
+    </header>
+    <main>
+       <div class="container">
+          <h1 class="questiontext">HAVE SOME QUESTIONS?</h1>
+          <img src="{% static 'umdsite/images/contLogo.png'%}" alt="Contact" class="contImg">
+          <form method="post">{% csrf_token %}
+          <div class="contactFields">
+              <input type="text" name="name" placeholder="   Your Full-name" class="reqFields" maxlength="15">
+              <input type="email" name="email" placeholder="   your email" class="reqFields">
+              <textarea name="query" cols="30" rows="20" placeholder="  Ask your Question" class="reqFields" style="width: 402px; height: 76px;"></textarea>
+              <input type="submit" value="Send Message" class="sendMsg">
+          </div>
+          </form>
+          <div class="medQoute">You can also contact us to 1800-100-123</div>
+       </div>
+    </main>
+    <footer>
+        <p class="footerSection">Copyright &copy; 2022 | Unused Medicine Donation</p>
+    </footer>
+</body>
+</html>
