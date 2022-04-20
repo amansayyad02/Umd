@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate of Appreciation!</title>
+    <link rel="stylesheet" href="{% static 'umdsite/certificate.css '%}"/>
+</head>
+<body>
+    <main>
+        <div class="container"><br><br>
+            <div class="certificateBox">
+                <img src="{% static 'umdsite/images/logo.png'%}" alt="logo" class="certImg">
+                <hr class="hrBorder" color="red">
+                <p class="certificate toptext">This is to certify that</p>
+                <div class="userNameOnCert certificate" id="usname">user</div>
+                <p class="certificate">did a good job by donating medicines for the sake of people's lives.</p>
+                <p class="certificate">Provided by</p>
+                <p class="certificate umd"> Unused Medicine Donation team</p>
+            </div>
+            <script src="{% static 'umdsite/script.js' %}"></script>
+        </div>
+    </main>
+</body>
+</html>

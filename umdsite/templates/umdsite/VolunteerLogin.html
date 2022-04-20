@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volunteer Login</title>
+    <link rel="stylesheet" href="{% static 'umdsite/style.css'%}"/>
+  </head>
+  <body>
+    <div class="loginRegisterContainer">
+      <div class="loginBox">
+        <img src="{% static 'umdsite/images/loginLogo2.png'%}" alt="loginLogo" class="loginLogo">
+        <div class="bottomLR">VOLUNTEER</div>
+        <form method="post" class="loginForm">{% csrf_token %}
+          <label for="volunteer-choice"></label>
+          <input list="volunteerNo" class="inputFields" id="volunteer-choice" name="volunteer-choice" placeholder="Enter Username"/>
+          <datalist id="volunteerNo">
+              <option value="volunteer1">
+              <option value="volunteer2">
+              <option value="volunteer3">
+          </datalist>
+          <br><br>
+          <input type="password" name="PassWord" class="inputFields" placeholder="Enter Your Password"><br>
+          <input type="submit" value="Sign in" class="formbtn"><br>
+          <p class="bottomLR">For becoming volunteer you have to contact through query forum</p><br>
+          <p class="bottomLR"><a href="{% url 'sitehome' %}" class="LoginRegisterNow">Home</a></p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

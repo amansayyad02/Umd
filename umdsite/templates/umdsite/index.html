@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unused Medicine Donation</title>
+    <link rel="stylesheet" href="{% static 'umdsite/style.css' %}"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="{% static 'images/logo.png'%}" alt="logo" class="img">
+            <ul class="navHeadings">
+                <li><a href="{% url 'sitehome' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+            <a href="{% url 'login' %}"><button type="button" class="loginbtn">Login/Sign Up</button></a>
+        </nav>
+    </header>
+    <main>
+        <div id="container">
+            <div class="slider">
+                <img src="{% static 'umdsite/images/MedicineDonation.jpg'%}" alt="Desert" class="desertImg">
+                <img src="{% static 'umdsite/images/donateImg1.jpg'%}" alt="Lighthouse" class="lightImg">
+            </div>
+            <div class="donateMed">
+                <img src="{% static 'umdsite/images/donateMed.png'%}" alt="donateMed" class="dMed">
+                <div class="donateTxt">
+                    <ul>
+                        <h2>Steps for donating Medicine</h2>
+                        <li>
+                            First login and Enter your details properly.
+                        </li>
+                        <li>
+                            Then enter the information and photos regarding the medicine.
+                        </li>
+                        <li>
+                            After you can give your address for picking up the medicine or you might deliver that medicine to our registered office/location.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="requestMed">
+                <img src="{% static 'umdsite/images/requestMed.png'%}" alt="requestMed" class="rMed">
+                <div class="requestTxt">
+                    <ul>
+                        <h2>Steps for requesting Medicine</h2>
+                        <li>
+                            First login and Enter your details properly.
+                        </li>
+                        <li>
+                            Then after login search for the medicine you want or drop a request query regarding the medicine.
+                        </li>
+                        <li>
+                            After if some medicine is found you can send request or you can get in touch with the person who is donating.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="footerSection">Copyright &copy; 2022 | Unused Medicine Donation</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,1 @@
+web: gunicorn umd.wsgi --log-file -
